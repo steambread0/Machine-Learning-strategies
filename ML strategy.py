@@ -117,7 +117,7 @@ for i in range(len(dd_real)):
 # Use Machine Learning to predict the future price
 
 '''We use price, volume and yield of last month as input to predict price, sortino ratio and drawdown of 
-the first day of the next month'''
+the first day of the next month. Each element in whole_x is one month's data.'''
 
 year=2010
 month=1
@@ -202,7 +202,7 @@ rgs.fit(trainxstd,trainy)
 predy=rgs.predict(testxstd)
 
 # Result format: [price,ret,dd,sr]
-# You can print the predicted price and real price
+'''You can print the predicted price and real price'''
 #py=pandas.DataFrame(predy)[0]
 #ry=pandas.DataFrame(testy)[0]
 #pandas.DataFrame({'pred':py,'real':ry})
@@ -234,7 +234,7 @@ for i in range(len(testy)):
     long_short_increment_test.append([long_incre,short_incre])
 
 # Compare predict value and real value of return+sortino-drawdown
-# Format: [change if long,change if short]
+'''Format: [change if long,change if short]'''
 #pandas.DataFrame({'pred':long_short_increment_pred,'real':long_short_increment_test})
 
 
