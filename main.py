@@ -1,4 +1,3 @@
-# Here are some notes
 # get US T-bond future data
 import quandl
 from datetime import datetime
